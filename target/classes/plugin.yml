@@ -1,0 +1,12 @@
+name: Reports
+version: '1.0-SNAPSHOT'
+main: me.nicetryl.reports.Reports
+api-version: '1.19'
+description: Report Gui
+commands:
+  reportmenu:
+    description: Used to open the report menu
+    usage: /reportmenu
+  report:
+    description: Used to Report Others
+    usage: /report <name> <reason>
