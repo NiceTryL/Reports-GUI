@@ -14,10 +14,7 @@ import java.util.Objects;
 public class ReportListener implements Listener {
     @EventHandler
     public void onInventoryClick(InventoryClickEvent e){
-        Player p = (Player) e.getWhoClicked();
-
         InventoryHolder holder = Objects.requireNonNull(e.getClickedInventory()).getHolder();
-
         if(holder instanceof ReportMenu) {
                 e.setCancelled(true);
 
