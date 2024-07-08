@@ -37,7 +37,10 @@ public class ReportCommand implements CommandExecutor {
             String reason = builder.toString().stripTrailing();
 
             Player target = Bukkit.getServer().getPlayerExact(playerName);
-
+            if (target == sender) {
+                 p.sendMessage(ChatColor.RED + "You cannot report yourself. Please provide a different player.");
+                return true;
+            }
             if (target == null) {
                 p.sendMessage(ChatColor.RED + "This user is not online or does not exist.");
             } else {
